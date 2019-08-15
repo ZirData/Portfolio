@@ -3,14 +3,17 @@ import './Navigation.css';
 
 class Navigation extends Component {
   render(){
+    const sections = ['Home','Projects','Resume','Contact']
+    const navLinks = sections.map(section => {
+      return(
+        <li><a href={'#' + section}></a>{section}</li>
+      )
+    });
     return(
       <nav>
         <h2 className='logo'> Portfolio</h2>
         <ul>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>Resume</li>
-          <li>Contact</li>
+          {navLinks}
         </ul>
       </nav>
    
